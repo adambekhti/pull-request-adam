@@ -124,3 +124,16 @@ En local, récupérez les changements : git pull origin main.
 [ ] Le fichier docker-compose.yml est présent sur ma branche main.
 
 [ ] Ma Pull Request vers le dépôt "Upstream" ne contient que les changements du README.
+
+
+Guide de maintenance
+Pour arrêter l'environnement Docker créé avec docker-compose up -d et nettoyer les ressources associées, il est essentiel d'utiliser la commande docker-compose down.
+
+Rôle de la commande docker-compose down
+Cette commande permet d'arrêter et de supprimer les ressources suivantes créées par votre fichier docker-compose.yml :
+
+Arrêt des conteneurs : Elle arrête les conteneurs (ici, le conteneur web basé sur nginx) qui sont en cours d'exécution.
+
+Suppression des conteneurs : Une fois arrêtés, les conteneurs sont supprimés.
+
+Nettoyage des réseaux : Elle supprime le réseau par défaut créé par Docker Compose pour que les conteneurs puissent communiquer entre eux.
